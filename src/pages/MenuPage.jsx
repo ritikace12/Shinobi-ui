@@ -22,6 +22,7 @@ const MenuPage = () => {
 
   const fetchRecipes = async () => {
     try {
+      console.log('Fetching recipes from:', `${config.API_URL}/recipes`);
       const response = await axios.get(`${config.API_URL}/recipes`);
       setRecipes(Array.isArray(response.data) ? response.data : []);
       setError(null);
@@ -35,6 +36,7 @@ const MenuPage = () => {
   const handleAddRecipe = async (e) => {
     e.preventDefault();
     try {
+      console.log('Adding recipe to:', `${config.API_URL}/recipes`);
       await axios.post(`${config.API_URL}/recipes`, newRecipe);
       setShowAddForm(false);
       setNewRecipe({
@@ -49,6 +51,7 @@ const MenuPage = () => {
       fetchRecipes();
     } catch (error) {
       console.error('Error adding recipe:', error);
+      setError('Failed to add recipe. Please try again later.');
     }
   };
 
