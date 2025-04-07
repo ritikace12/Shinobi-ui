@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import config from "../config";
 
 const RegistrationPage = () => {
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ const RegistrationPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5001/api/shinobi", {
+      const response = await fetch(`${config.API_URL}/shinobi`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
+import config from "../config";
 
 const ShinobiList = () => {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ const ShinobiList = () => {
 
   // Fetch Shinobi from DB
   useEffect(() => {
-    fetch("http://localhost:5001/api/shinobi")
+    fetch(`${config.API_URL}/shinobi`)
       .then((res) => res.json())
       .then((data) => setShinobi(data))
       .catch((err) => console.error("Error fetching shinobi:", err));

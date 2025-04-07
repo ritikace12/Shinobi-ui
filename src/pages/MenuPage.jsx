@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import config from '../config';
 
 const MenuPage = () => {
   const [recipes, setRecipes] = useState([]);
@@ -21,7 +22,7 @@ const MenuPage = () => {
 
   const fetchRecipes = async () => {
     try {
-      const response = await axios.get('/api/recipes');
+      const response = await axios.get(`${config.API_URL}/recipes`);
       setRecipes(Array.isArray(response.data) ? response.data : []);
       setError(null);
     } catch (error) {
@@ -34,7 +35,7 @@ const MenuPage = () => {
   const handleAddRecipe = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('/api/recipes', newRecipe);
+      await axios.post(`${config.API_URL}/recipes`, newRecipe);
       setShowAddForm(false);
       setNewRecipe({
         name: '',
