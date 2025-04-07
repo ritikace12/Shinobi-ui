@@ -56,28 +56,7 @@ const BingoBook = () => {
 
   return (
     <div className="w-full">
-      {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center justify-between">
-            <div className="lg:w-1/2 mb-10 lg:mb-0">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-                Most Wanted <span className="text-red-400">Criminals</span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8">
-                View and track the most dangerous individuals in the shinobi world.
-              </p>
-            </div>
-            <div className="lg:w-1/2">
-              <Lottie
-                animationData={ninjaAnimation}
-                loop={true}
-                className="w-full h-full filter drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+  
 
       {/* Filter */}
       <section className="py-8 relative">
