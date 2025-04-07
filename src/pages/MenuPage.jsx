@@ -80,37 +80,37 @@ const MenuPage = () => {
   };
 
   return (
-    <div className="w-full min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+    <div className="w-full min-h-screen py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-white mb-4 animate-fadeIn">
+        <div className="text-center mb-8 sm:mb-12">
+          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3 sm:mb-4 animate-fadeIn">
             Ichiraku <span className="text-orange-400">Ramen</span> Menu
           </h1>
-          <p className="text-lg text-gray-300 mb-8 animate-fadeIn delay-200">
+          <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 animate-fadeIn delay-200">
             The best ramen in the Hidden Leaf Village
           </p>
           <button
             onClick={() => setShowAddForm(true)}
-            className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-lg font-semibold hover:scale-105 transition-all duration-300 shadow-lg shadow-orange-500/20 hover:shadow-orange-500/40"
+            className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold hover:scale-105 transition-all duration-300 shadow-lg shadow-orange-500/20 hover:shadow-orange-500/40"
           >
             Add New Recipe
           </button>
         </div>
 
         {error && (
-          <div className="bg-red-900/50 border border-red-500/50 text-red-200 px-4 py-3 rounded relative mb-8 backdrop-blur-sm" role="alert">
+          <div className="bg-red-900/50 border border-red-500/50 text-red-200 px-4 py-3 rounded relative mb-6 sm:mb-8 backdrop-blur-sm" role="alert">
             <strong className="font-bold">Error!</strong>
             <span className="block sm:inline"> {error}</span>
           </div>
         )}
 
         {showAddForm && (
-          <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 z-50">
-            <div className="bg-gray-800 rounded-lg p-8 max-w-2xl w-full shadow-2xl transform transition-all duration-300 border border-orange-500/20">
-              <h2 className="text-2xl font-bold text-white mb-4">Add New Recipe</h2>
-              <form onSubmit={handleAddRecipe} className="space-y-4">
+          <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 z-50 overflow-y-auto">
+            <div className="bg-gray-800 rounded-lg p-4 sm:p-8 max-w-2xl w-full shadow-2xl transform transition-all duration-300 border border-orange-500/20 my-4">
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">Add New Recipe</h2>
+              <form onSubmit={handleAddRecipe} className="space-y-3 sm:space-y-4">
                 <div>
-                  <label className="block text-gray-300 mb-2">Name</label>
+                  <label className="block text-gray-300 mb-1 sm:mb-2">Name</label>
                   <input
                     type="text"
                     name="name"
@@ -121,7 +121,7 @@ const MenuPage = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-gray-300 mb-2">Description</label>
+                  <label className="block text-gray-300 mb-1 sm:mb-2">Description</label>
                   <textarea
                     name="description"
                     value={newRecipe.description}
@@ -131,7 +131,7 @@ const MenuPage = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-gray-300 mb-2">Price (¥)</label>
+                  <label className="block text-gray-300 mb-1 sm:mb-2">Price (¥)</label>
                   <input
                     type="number"
                     name="price"
@@ -142,7 +142,7 @@ const MenuPage = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-gray-300 mb-2">Category</label>
+                  <label className="block text-gray-300 mb-1 sm:mb-2">Category</label>
                   <select
                     name="category"
                     value={newRecipe.category}
@@ -156,7 +156,7 @@ const MenuPage = () => {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-gray-300 mb-2">Ingredients</label>
+                  <label className="block text-gray-300 mb-1 sm:mb-2">Ingredients</label>
                   {newRecipe.ingredients.map((ingredient, index) => (
                     <input
                       key={index}
@@ -175,7 +175,7 @@ const MenuPage = () => {
                     + Add Ingredient
                   </button>
                 </div>
-                <div className="flex items-center space-x-4">
+                <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-4">
                   <label className="flex items-center text-gray-300">
                     <input
                       type="checkbox"
@@ -197,7 +197,7 @@ const MenuPage = () => {
                     Vegetarian
                   </label>
                 </div>
-                <div className="flex justify-end space-x-4">
+                <div className="flex flex-col sm:flex-row justify-end space-y-2 sm:space-y-0 sm:space-x-4 pt-4">
                   <button
                     type="button"
                     onClick={() => setShowAddForm(false)}
@@ -217,14 +217,14 @@ const MenuPage = () => {
           </div>
         )}
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {recipes && recipes.length > 0 ? (
             recipes.map((item) => (
               <div 
                 key={item._id}
                 className="bg-gray-800/50 backdrop-blur-md rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 border border-orange-500/20 hover:border-orange-500/40"
               >
-                <div className="h-48 bg-gradient-to-r from-orange-500/20 to-red-500/20">
+                <div className="h-40 sm:h-48 bg-gradient-to-r from-orange-500/20 to-red-500/20">
                   {item.image ? (
                     <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
                   ) : (
@@ -233,20 +233,20 @@ const MenuPage = () => {
                     </div>
                   )}
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-2">{item.name}</h3>
-                  <p className="text-gray-300 mb-4">{item.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
+                <div className="p-4 sm:p-6">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2">{item.name}</h3>
+                  <p className="text-sm sm:text-base text-gray-300 mb-3 sm:mb-4">{item.description}</p>
+                  <div className="flex flex-wrap gap-2 mb-3 sm:mb-4">
                     {item.isSpicy && (
-                      <span className="bg-red-900/50 text-red-200 px-2 py-1 rounded-full text-sm border border-red-500/50">Spicy</span>
+                      <span className="bg-red-900/50 text-red-200 px-2 py-1 rounded-full text-xs sm:text-sm border border-red-500/50">Spicy</span>
                     )}
                     {item.isVegetarian && (
-                      <span className="bg-green-900/50 text-green-200 px-2 py-1 rounded-full text-sm border border-green-500/50">Vegetarian</span>
+                      <span className="bg-green-900/50 text-green-200 px-2 py-1 rounded-full text-xs sm:text-sm border border-green-500/50">Vegetarian</span>
                     )}
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-2xl font-bold text-orange-400">¥{item.price}</span>
-                    <button className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-lg hover:scale-105 transition-all duration-300 shadow-lg shadow-orange-500/20 hover:shadow-orange-500/40">
+                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-2 sm:space-y-0">
+                    <span className="text-xl sm:text-2xl font-bold text-orange-400">¥{item.price}</span>
+                    <button className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-lg hover:scale-105 transition-all duration-300 shadow-lg shadow-orange-500/20 hover:shadow-orange-500/40">
                       Order Now
                     </button>
                   </div>
@@ -254,8 +254,8 @@ const MenuPage = () => {
               </div>
             ))
           ) : (
-            <div className="col-span-full text-center py-12">
-              <p className="text-gray-400 text-lg">No recipes available yet. Be the first to add one!</p>
+            <div className="col-span-full text-center py-8 sm:py-12">
+              <p className="text-gray-400 text-base sm:text-lg">No recipes available yet. Be the first to add one!</p>
             </div>
           )}
         </div>
