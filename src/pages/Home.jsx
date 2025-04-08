@@ -19,7 +19,7 @@ const Home = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between">
             <div className="lg:w-1/2 mb-10 lg:mb-0">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-                Welcome to the <span className="text-orange-400">Chunnin Exams</span>
+                Welcome to the <span className="text-orange-400">Shinobi World</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8">
                 Join the ranks of the most elite shinobi in the Five Great Nations. 
@@ -82,7 +82,7 @@ const Home = () => {
       <footer className="bg-gradient-to-b from-gray-900 to-gray-800 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-gray-400">
-            © 2024 Chunnin Exams. All rights reserved.
+            © 2024 Shinobi World. All rights reserved.
           </p>
         </div>
       </footer>

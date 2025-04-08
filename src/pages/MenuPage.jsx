@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import config from '../config';
 
@@ -6,6 +6,8 @@ const MenuPage = () => {
   const [recipes, setRecipes] = useState([]);
   const [showAddForm, setShowAddForm] = useState(false);
   const [error, setError] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [fetchTimeout, setFetchTimeout] = useState(null);
   const [newRecipe, setNewRecipe] = useState({
     name: '',
     description: '',
@@ -18,23 +20,47 @@ const MenuPage = () => {
 
   useEffect(() => {
     fetchRecipes();
+    return () => {
+      if (fetchTimeout) {
+        clearTimeout(fetchTimeout);
+      }
+    };
   }, []);
 
-  const fetchRecipes = async () => {
-    try {
-      console.log('Fetching recipes from:', `${config.API_URL}/recipes`);
-      const response = await axios.get(`${config.API_URL}/recipes`);
-      setRecipes(Array.isArray(response.data) ? response.data : []);
-      setError(null);
-    } catch (error) {
-      console.error('Error fetching recipes:', error);
-      setError('Failed to load recipes. Please try again later.');
-      setRecipes([]);
+  const fetchRecipes = useCallback(async () => {
+    // Clear any existing timeout
+    if (fetchTimeout) {
+      clearTimeout(fetchTimeout);
     }
-  };
+    
+    // Set a new timeout to debounce the fetch
+    const timeout = setTimeout(async () => {
+      try {
+        console.log('Fetching recipes from:', `${config.API_URL}/recipes`);
+        const response = await axios.get(`${config.API_URL}/recipes`);
+        setRecipes(Array.isArray(response.data) ? response.data : []);
+        setError(null);
+      } catch (error) {
+        console.error('Error fetching recipes:', error);
+        setError('Failed to load recipes. Please try again later.');
+        setRecipes([]);
+      }
+    }, 500); // 500ms debounce
+    
+    setFetchTimeout(timeout);
+  }, [fetchTimeout]);
 
   const handleAddRecipe = async (e) => {
     e.preventDefault();
+    
+    // Prevent double submission
+    if (isSubmitting) {
+      console.log('Form is already being submitted, please wait...');
+      return;
+    }
+    
+    setIsSubmitting(true);
+    
     try {
       console.log('Adding recipe to:', `${config.API_URL}/recipes`);
       await axios.post(`${config.API_URL}/recipes`, newRecipe);
@@ -52,6 +78,8 @@ const MenuPage = () => {
     } catch (error) {
       console.error('Error adding recipe:', error);
       setError('Failed to add recipe. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 

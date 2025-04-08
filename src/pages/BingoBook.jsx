@@ -13,7 +13,7 @@ const BingoBook = () => {
       rank: "S",
       organization: "Former Akatsuki",
       bounty: "50,000,000 ryo",
-      description: "A former member of the Akatsuki and one of the legendary Sannin. Known for his experiments with forbidden jutsu and human experimentation.",
+      description: "A former member of the Akatsuki and one of the legendary Sannin. Known for his experiments with forbidden jutsu and human experimentation. Currently under surveillance by Konoha.",
       image: "https://i.imgur.com/example10.jpg"
     },
     {
@@ -21,7 +21,7 @@ const BingoBook = () => {
       rank: "S",
       organization: "Akatsuki Leader",
       bounty: "100,000,000 ryo",
-      description: "The leader of the Akatsuki organization. Possesses the Rinnegan and controls six bodies with different abilities.",
+      description: "The leader of the Akatsuki organization. Possesses the Rinnegan and controls six bodies with different abilities. Status: Deceased.",
       image: "https://i.imgur.com/example11.jpg"
     },
     {
@@ -29,7 +29,7 @@ const BingoBook = () => {
       rank: "S",
       organization: "Akatsuki",
       bounty: "75,000,000 ryo",
-      description: "A former ANBU captain who massacred his clan. Known for his mastery of the Sharingan and Genjutsu.",
+      description: "A former ANBU captain who massacred his clan. Known for his mastery of the Sharingan and Genjutsu. Status: Deceased, posthumously cleared of charges.",
       image: "https://i.imgur.com/example12.jpg"
     },
     {
@@ -37,7 +37,7 @@ const BingoBook = () => {
       rank: "S",
       organization: "Akatsuki",
       bounty: "60,000,000 ryo",
-      description: "Known as the Monster of the Hidden Mist. Wields the Samehada sword and possesses immense chakra.",
+      description: "Known as the Monster of the Hidden Mist. Wields the Samehada sword and possesses immense chakra. Status: Deceased.",
       image: "https://i.imgur.com/example13.jpg"
     },
     {
@@ -45,8 +45,168 @@ const BingoBook = () => {
       rank: "S",
       organization: "Akatsuki",
       bounty: "55,000,000 ryo",
-      description: "A master of explosive clay techniques. Known for his artistic approach to combat and his explosive jutsu.",
+      description: "A master of explosive clay techniques. Known for his artistic approach to combat and his explosive jutsu. Status: Deceased.",
       image: "https://i.imgur.com/example14.jpg"
+    },
+    {
+      name: "Sasori",
+      rank: "S",
+      organization: "Akatsuki",
+      bounty: "65,000,000 ryo",
+      description: "Master puppeteer who turned himself into a human puppet. Known for his deadly poison and puppet techniques. Status: Deceased.",
+      image: "https://i.imgur.com/example15.jpg"
+    },
+    {
+      name: "Kakuzu",
+      rank: "S",
+      organization: "Akatsuki",
+      bounty: "70,000,000 ryo",
+      description: "Immortal shinobi who can replace his organs. Known for his multiple hearts and elemental affinities. Status: Deceased.",
+      image: "https://i.imgur.com/example16.jpg"
+    },
+    {
+      name: "Hidan",
+      rank: "S",
+      organization: "Akatsuki",
+      bounty: "45,000,000 ryo",
+      description: "Immortal cultist who can't die. Known for his ritualistic combat style and curse techniques. Status: Presumed alive but immobilized.",
+      image: "https://i.imgur.com/example17.jpg"
+    },
+    {
+      name: "Konan",
+      rank: "S",
+      organization: "Akatsuki",
+      bounty: "40,000,000 ryo",
+      description: "Paper ninja with the ability to transform her body into paper. Known for her origami techniques. Status: Deceased.",
+      image: "https://i.imgur.com/example18.jpg"
+    },
+    {
+      name: "Zetsu",
+      rank: "S",
+      organization: "Akatsuki",
+      bounty: "35,000,000 ryo",
+      description: "Plant-like creature with the ability to merge with the environment. Known for his intelligence gathering. Status: Deceased.",
+      image: "https://i.imgur.com/example19.jpg"
+    },
+    {
+      name: "Madara Uchiha",
+      rank: "S+",
+      organization: "Independent",
+      bounty: "150,000,000 ryo",
+      description: "Legendary Uchiha clan leader who founded the Akatsuki. Possesses the Eternal Mangekyo Sharingan and later the Rinnegan. Status: Deceased.",
+      image: "https://i.imgur.com/example20.jpg"
+    },
+    {
+      name: "Obito Uchiha",
+      rank: "S+",
+      organization: "Akatsuki",
+      bounty: "120,000,000 ryo",
+      description: "Known as Tobi and later as the masked man. Possesses the Mangekyo Sharingan and Kamui. Status: Deceased.",
+      image: "https://i.imgur.com/example21.jpg"
+    },
+    {
+      name: "Nagato",
+      rank: "S+",
+      organization: "Akatsuki",
+      bounty: "110,000,000 ryo",
+      description: "The true identity of Pain. Possesses the Rinnegan and controls six bodies. Status: Deceased.",
+      image: "https://i.imgur.com/example22.jpg"
+    },
+    {
+      name: "Jūgo",
+      rank: "S",
+      organization: "Independent",
+      bounty: "30,000,000 ryo",
+      description: "A member of the Curse Mark clan who can transform into a berserker. Known for his uncontrollable rage. Status: At large.",
+      image: "https://i.imgur.com/example23.jpg"
+    },
+    {
+      name: "Suigetsu Hōzuki",
+      rank: "S",
+      organization: "Independent",
+      bounty: "25,000,000 ryo",
+      description: "A member of the Hōzuki clan who can liquefy his body. Known for his water techniques. Status: At large.",
+      image: "https://i.imgur.com/example24.jpg"
+    },
+    {
+      name: "Karin",
+      rank: "A",
+      organization: "Independent",
+      bounty: "20,000,000 ryo",
+      description: "A sensor type ninja with healing abilities. Known for her tracking skills. Status: At large.",
+      image: "https://i.imgur.com/example25.jpg"
+    },
+    {
+      name: "Jigen",
+      rank: "S+",
+      organization: "Kara",
+      bounty: "200,000,000 ryo",
+      description: "Leader of the Kara organization. Possesses the Karma mark and is a vessel for Isshiki Otsutsuki. Status: Deceased.",
+      image: "https://i.imgur.com/example26.jpg"
+    },
+    {
+      name: "Isshiki Otsutsuki",
+      rank: "S+",
+      organization: "Otsutsuki Clan",
+      bounty: "300,000,000 ryo",
+      description: "A member of the Otsutsuki clan who attempted to harvest the chakra fruit. Status: Deceased.",
+      image: "https://i.imgur.com/example27.jpg"
+    },
+    {
+      name: "Momoshiki Otsutsuki",
+      rank: "S+",
+      organization: "Otsutsuki Clan",
+      bounty: "250,000,000 ryo",
+      description: "A member of the Otsutsuki clan who attempted to harvest the chakra fruit. Status: Deceased, but his Karma remains.",
+      image: "https://i.imgur.com/example28.jpg"
+    },
+    {
+      name: "Kinshiki Otsutsuki",
+      rank: "S+",
+      organization: "Otsutsuki Clan",
+      bounty: "200,000,000 ryo",
+      description: "A member of the Otsutsuki clan who accompanied Momoshiki. Status: Deceased.",
+      image: "https://i.imgur.com/example29.jpg"
+    },
+    {
+      name: "Urashiki Otsutsuki",
+      rank: "S+",
+      organization: "Otsutsuki Clan",
+      bounty: "180,000,000 ryo",
+      description: "A member of the Otsutsuki clan who can manipulate time. Status: Deceased.",
+      image: "https://i.imgur.com/example30.jpg"
+    },
+    {
+      name: "Kaguya Otsutsuki",
+      rank: "S+",
+      organization: "Otsutsuki Clan",
+      bounty: "500,000,000 ryo",
+      description: "The Rabbit Goddess who ate the chakra fruit and became the first person with chakra. Status: Sealed.",
+      image: "https://i.imgur.com/example31.jpg"
+    },
+    {
+      name: "Code",
+      rank: "S+",
+      organization: "Kara",
+      bounty: "150,000,000 ryo",
+      description: "A member of Kara with a white Karma mark. Known for his loyalty to Isshiki. Status: At large.",
+      image: "https://i.imgur.com/example32.jpg"
+    },
+    {
+      name: "Koji Kashin",
+      rank: "S+",
+      organization: "Kara",
+      bounty: "100,000,000 ryo",
+      description: "A clone of Jiraiya created by Amado. Known for his Sage Mode and toad summoning. Status: At large.",
+      image: "https://i.imgur.com/example33.jpg"
+    },
+    {
+      name: "Delta",
+      rank: "S",
+      organization: "Kara",
+      bounty: "80,000,000 ryo",
+      description: "A member of Kara with cybernetic enhancements. Known for her strength and durability. Status: At large.",
+      image: "https://i.imgur.com/example34.jpg"
     }
   ];
 
@@ -56,8 +216,6 @@ const BingoBook = () => {
 
   return (
     <div className="w-full">
-  
-
       {/* Filter */}
       <section className="py-8 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -70,6 +228,8 @@ const BingoBook = () => {
               <option value="all">All Criminals</option>
               <option value="Akatsuki">Akatsuki Members</option>
               <option value="Former Akatsuki">Former Akatsuki</option>
+              <option value="Kara">Kara Members</option>
+              <option value="Otsutsuki Clan">Otsutsuki Clan</option>
               <option value="Independent">Independent Criminals</option>
             </select>
           </div>
@@ -99,7 +259,6 @@ const BingoBook = () => {
           </div>
         </div>
       </section>
-
     </div>
   );
 };

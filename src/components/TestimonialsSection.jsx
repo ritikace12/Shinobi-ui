@@ -3,22 +3,40 @@ import React from "react";
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Naruto Uzumaki",
-      role: "Seventh Hokage",
-      quote: "The Chunnin Exams were the turning point in my journey to become Hokage. Never give up!",
-      color: "from-orange-500/20 to-red-500/20 border-orange-500/20"
+      name: "Kakashi Hatake",
+      role: "Sixth Hokage",
+      quote: "The Chunnin Exams test not just your skills, but your character and determination. A true shinobi must be willing to sacrifice for their comrades.",
+      color: "from-gray-500/20 to-blue-500/20 border-gray-500/20"
+    },
+    {
+      name: "Madara Uchiha",
+      role: "Founder of Akatsuki",
+      quote: "Power is not measured by the number of techniques you know, but by the strength of your will and the depth of your hatred.",
+      color: "from-red-500/20 to-purple-500/20 border-red-500/20"
+    },
+    {
+      name: "Minato Namikaze",
+      role: "Fourth Hokage",
+      quote: "The true measure of a shinobi is not how many battles they win, but how many lives they save. Protect your village and your comrades at all costs.",
+      color: "from-yellow-500/20 to-orange-500/20 border-yellow-500/20"
+    },
+    {
+      name: "Gaara",
+      role: "Fifth Kazekage",
+      quote: "I was once a monster who knew only pain. The Chunnin Exams taught me that bonds with others can transform even the most broken soul.",
+      color: "from-sand-500/20 to-brown-500/20 border-sand-500/20"
     },
     {
       name: "Sasuke Uchiha",
       role: "Shadow Hokage",
-      quote: "The exams taught me the importance of teamwork and protecting your comrades.",
+      quote: "The path to power is not through hatred or revenge, but through understanding and protecting those who matter. The exams showed me that.",
       color: "from-purple-500/20 to-blue-500/20 border-purple-500/20"
     },
     {
-      name: "Sakura Haruno",
-      role: "Medical Ninja",
-      quote: "Through the exams, I learned to believe in myself and my abilities as a shinobi.",
-      color: "from-pink-500/20 to-red-500/20 border-pink-500/20"
+      name: "Amado",
+      role: "Kara Scientist",
+      quote: "The future of shinobi lies not in traditional techniques, but in the fusion of chakra and technology. The Chunnin Exams must evolve.",
+      color: "from-cyan-500/20 to-blue-500/20 border-cyan-500/20"
     }
   ];
 
